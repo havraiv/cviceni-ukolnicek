@@ -1,18 +1,24 @@
 console.log('funguju!');
 
-// V hlavním souboru index.js vytvořte komponentu Task, která bude představovat jeden úkol. Komponenta bude jako svoje props očekávat objekt s jedním úkolem.
-
 const Task = (props) => {
+  console.log(props.done);
   if (props.done === true) {
-  } else {
-  }
-  return `<div class="task">
+    return `<div class="task">
   <div class="task__body">
     <div class="task__name">${props.name}</div>
     <div class="task__due">${props.due}</div>
   </div>
   <div class="task__done">✓</div>
 </div>`;
+  } else if (props.done === false) {
+    return `<div class="task">
+  <div class="task__body">
+    <div class="task__name">${props.name}</div>
+    <div class="task__due">${props.due}</div>
+  </div>
+  <div class="task__done">x</div>
+</div>`;
+  }
 };
 
 const renderTasks = () => {
