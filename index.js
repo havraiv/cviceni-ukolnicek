@@ -1,7 +1,6 @@
 console.log('funguju!');
 
 const Task = (props) => {
-  console.log(props.done);
   if (props.done === true) {
     return `<div class="task">
   <div class="task__body">
